@@ -41,4 +41,7 @@ for i in trusted_functions: print(i)
 
 expression = input("Type a function: ")
 
-print(expression.split("(")[0].split("calculate").pop(), "is", eval(expression))
+if expression.split("(")[0] not in trusted_functions:
+    print ("wrong input ... there are no this function")
+else:
+    print(expression.split("(")[0].split("calculate").pop(), "is", eval(expression))
