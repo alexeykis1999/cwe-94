@@ -41,4 +41,4 @@ for i in trusted_functions: print(i)
 
 expression = input("Type a function: ")
 
-print(expression.split("(")[0].split("calculate").pop(), "is", eval(expression))
+print(expression.split("(")[0].split("calculate").pop(), "is", eval(expression, {'__builtins__': {}}))
